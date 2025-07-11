@@ -1,3 +1,8 @@
+# Handle Tramp idiosyncracies
+if [[ "$TERM" == "dumb" ]]; then
+	unsetopt zle && PS1="> " && return
+fi
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -84,3 +89,7 @@ bindkey "^[OF" end-of-line
 
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.config/emacs/bin
+export COLORTERM=truecolor
+export EMACS_SOCKET_NAME=$XDG_RUNTIME_DIR/.emacs.socket

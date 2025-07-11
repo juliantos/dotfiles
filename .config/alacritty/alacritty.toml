@@ -1,7 +1,5 @@
-import = [
-    "~/.config/alacritty/catppuccin-macchiato.toml"]
 
-[shell]
+[terminal.shell]
 program = "/usr/bin/zsh"
 
 [font]
@@ -10,3 +8,9 @@ normal = { family = "FiraCode Nerd Font", style = "bold" }
 
 [env]
 term = "xterm-256color"
+
+[general]
+import = [
+    "~/.config/alacritty/catppuccin-macchiato.toml"]
+
+[terminal]

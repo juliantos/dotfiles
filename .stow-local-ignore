@@ -1,1 +1,4 @@
-.gitmodules
+\.gitmodules
+\.git
+\.gitignore
+	
